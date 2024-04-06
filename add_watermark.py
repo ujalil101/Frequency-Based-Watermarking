@@ -74,7 +74,3 @@ def extract_text_from_watermarked_image(watermarked_image, original_fft):
         extracted_text_image[y:y+h, x:x+w] = watermarked_image[y:y+h, x:x+w]  # Extract text regions
     
     return extracted_text_image
-
-
-
-

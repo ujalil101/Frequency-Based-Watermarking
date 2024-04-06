@@ -7,7 +7,7 @@ from PIL import Image
 
 if __name__ == '__main__':
     # path and text
-    input_image_path = '/Users/ussie/Desktop/MOCOVI_Research/Research Project/image/Starry_Night.jpeg'
+    input_image_path = '/Users/ussie/Desktop/MOCOVI_Research/Research Project/image/mona.jpeg'
     
     watermark_text = "Usman Jalil"
 

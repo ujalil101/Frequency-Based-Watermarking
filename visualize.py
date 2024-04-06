@@ -54,4 +54,3 @@ def plot_images_and_3d_fft(original_image, original_fft, text_watermarked_image,
     
     plt.tight_layout()
     plt.show()
-
