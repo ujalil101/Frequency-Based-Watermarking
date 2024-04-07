@@ -54,5 +54,5 @@ Parameters:
 - text_watermarked_fft: FFT of the watermarked image.
 
 ## Presentation Demo
-https://docs.google.com/presentation/d/1FGfVa4J5FgCU1dKTGjOTltBaQ4gzcFvVQs_boJee2UY/edit?usp=sharing
+https://drive.google.com/file/d/1hbgYyajGHZjtpdPPRQCXWBEynC_HUfU6/view?usp=sharing
 
