@@ -1,4 +1,4 @@
-from add_watermark import *
+from watermarking_tools import *
 from visualize import *
 from PIL import Image
 
@@ -7,7 +7,7 @@ from PIL import Image
 
 if __name__ == '__main__':
     # path and text
-    input_image_path = '/Users/ussie/Desktop/MOCOVI_Research/Research Project/image/mona.jpeg'
+    input_image_path = '/Users/ussie/Desktop/MOCOVI_Research/Research Project/image/Starry_Night.jpeg'
     
     watermark_text = "Usman Jalil"
 
@@ -22,3 +22,8 @@ if __name__ == '__main__':
     cv2.imshow('Extracted Text Image', extracted_text_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
+    ssim = calculate_ssim(original_image, watermarked_image)
+    print("Structural Similarity Index (SSI):", ssim)
+    print()
+

@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 import random
+from skimage.metrics import structural_similarity as compare_ssim
+
 
 def add_text_watermark(original_img_path, text):
     # load image
@@ -12,14 +14,14 @@ def add_text_watermark(original_img_path, text):
     text_thickness = 2
     text_color = (255, 255, 255)
 
-    # Generate random coordinates for text position
+    # create random coordinates for text position (esntially to hide hte text in FT)
     max_x = original_image.shape[1] - 1
     max_y = original_image.shape[0] - 1
     text_x = random.randint(0, max_x)
     text_y = random.randint(0, max_y)
     text_position = (text_x, text_y)
     
-    # Create text image
+    # crete text image
     text_image = np.zeros_like(original_image)
     text_width, _ = cv2.getTextSize(text, font, text_size, text_thickness)[0]
     text_position = (text_x, text_y)
@@ -74,3 +76,9 @@ def extract_text_from_watermarked_image(watermarked_image, original_fft):
         extracted_text_image[y:y+h, x:x+w] = watermarked_image[y:y+h, x:x+w]  # Extract text regions
     
     return extracted_text_image
+
+
+def calculate_ssim(original_image, watermarked_image):
+    ssim = compare_ssim(original_image, watermarked_image)
+    return ssim
+
